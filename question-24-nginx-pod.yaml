@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    role: nginx
+  name: question-24-nginx-pod
+  namespace: security
+spec:
+  containers:
+  - image: nginx
+    name: question-24-nginx-container
+    ports:
+    - containerPort: 8080

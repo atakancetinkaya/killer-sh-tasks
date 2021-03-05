@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    container: pod
+    pod: container
+  name: tigers-reunite
+  namespace: project-tiger
+spec:
+  containers:
+  - image: httpd:2.4.41-alpine
+    name: tiger-reunite
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
+---
+#kubectl -n project-tiger run tigers-reunite --image=httpd:2.4.41-alpine --labels pod=container,container=pod
